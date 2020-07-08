@@ -1,0 +1,84 @@
+﻿@model TMCreateViewModel
+@{
+    ViewBag.Title = "Create Tour";
+    var types = ViewBag.Types as List<TourismManagement.Models.Type>;
+}
+    <div class="text-center" style="color:#003E60">
+        <h1>@ViewBag.Title</h1>
+    </div>
+    <form enctype="multipart/form-data" asp-controller="TourManager" asp-action="Create" method="post" class="mt-2">
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="TourName"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="TourName" class="form-control" />
+                <span asp-validation-for="TourName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="Desciption"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Desciption" class="form-control" />
+                <span asp-validation-for="Desciption" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="Price"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="TypeId"></label>
+            </div>
+            <div class="col-sm-10">
+                <select asp-for="TypeId" class="custom-select">
+                    <option value=" ">Select a Type</option>
+                    @if(types != null)
+                    {
+                        foreach (var type in types)
+                        {
+                            <option value="@type.TypeId">@type.TypeName</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="Img"></label>
+            </div>
+            <div class="col-sm-10">
+                <div class="custom-file">
+                    <input class="custom-file-input" asp-for="Img">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row form-group text-center ">
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary">
+                    Create
+                </button>
+                <a asp-controller="TourManager" asp-action="Index" class="btn btn-warning">Back</a>
+            </div>
+        </div>
+    </form>
+
+@section Scripts{
+    <script>$(document).ready(function () {
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                $("#avatar").attr("src", window.URL.createObjectURL($(this)[0].files[0]));
+            });
+        });</script>
+}

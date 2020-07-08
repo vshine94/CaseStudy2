@@ -1,0 +1,55 @@
+﻿<Properties StartupConfiguration="{7286C916-EFCB-4CFB-BF16-9890E6D791A0}|Default">
+  <MonoDevelop.Ide.ItemProperties.TourismManagement PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TourismManagement/Models/AppDbContext.cs">
+    <Files>
+      <File FileName="TourismManagement/ViewModels/HomeBookViewModel.cs" Line="21" Column="45" IsPinned="True" />
+      <File FileName="TourismManagement/Controllers/CustomerController.cs" Line="26" Column="45" />
+      <File FileName="TourismManagement/Controllers/HomeController.cs" Line="49" Column="10" />
+      <File FileName="TourismManagement/Views/Customer/Edit.cshtml" Line="55" Column="9" />
+      <File FileName="TourismManagement/Models/CustomerRepository.cs" Line="18" Column="70" />
+      <File FileName="TourismManagement/Models/Customer.cs" Line="22" Column="42" />
+      <File FileName="TourismManagement/ViewModels/CustomerEditViewModel.cs" Line="10" Column="1" />
+      <File FileName="TourismManagement/Views/User/Index.cshtml" Line="7" Column="11" />
+      <File FileName="TourismManagement/Views/User/Create.cshtml" Line="8" Column="11" />
+      <File FileName="TourismManagement/ViewModels/CustomerIndexViewModel.cs" Line="1" Column="1" />
+      <File FileName="TourismManagement/Views/Customer/Index.cshtml" Line="1" Column="1" />
+      <File FileName="TourismManagement/Views/Home/Infor.cshtml" Line="26" Column="1" />
+      <File FileName="TourismManagement/Models/AppDbContext.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TourismManagement" expanded="True">
+            <Node name="TourismManagement" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="AppDbContext.cs" selected="True" />
+              </Node>
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Account" expanded="True" />
+                <Node name="Customer" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Role" expanded="True" />
+                <Node name="TourManager" expanded="True" />
+                <Node name="User" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>fileName</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

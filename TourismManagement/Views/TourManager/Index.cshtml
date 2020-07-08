@@ -1,0 +1,43 @@
+﻿@model HomeIndexViewModel
+@{
+    ViewBag.Title = "Tour management";
+}
+    <div class="text-center" style="color:#003E60">
+        <h1>@ViewBag.Title</h1>
+    </div>
+<a asp-controller="TourManager" asp-action="Create" class="btn btn-primary" style="width:auto">Create Tour</a>
+
+<table class="table table-bordered table-hover mt-2">
+    <thead class="thead-dark text-center">
+        <tr>
+            <th>ID</th>
+            <th>Tour Name</th>
+            <th>Images</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.tours.Any())
+        {
+            foreach (var tour in Model.tours)
+            {
+                  var avatarPath = $"/images/{(tour.TourImage ?? "Logo.png")}";
+                <tr>
+                    <td>@tour.TourId</td>
+                    <td>@tour.TourName</td>
+                    <td><img src="@avatarPath" style="width:100px;height:100px" /></td>
+                    <td>@tour.Description</td>
+                    <td>@tour.TypeId</td>
+                    <td>@tour.Price</td>
+                    <td>
+                        <a asp-controller="TourManager" asp-action="Edit" asp-route-id="@tour.TourId" class="btn btn-warning">Edit</a>
+                        <a asp-controller="TourManager" asp-action="Edit" asp-route-id="@tour.TourId" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

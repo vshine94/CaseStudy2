@@ -1,0 +1,43 @@
+﻿@model CustomerIndexViewModel
+@{
+    ViewBag.Title = Model.TitleName;
+}
+<div class="text-center" style="color:#003E60">
+    <h1>@ViewBag.Title</h1>
+</div>
+
+<table class="table table-bordered table-hover mt-2">
+    <thead class="thead-dark text-center">
+        <tr>
+            <th>ID</th>
+            <th>Customer Name</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Identity Card</th>
+            <th>Tours Booked</th>
+            <th>Departure</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.customers.Any())
+        {
+            foreach (var customer in Model.customers)
+            {
+        <tr>
+            <td>@customer.CustomerId</td>
+            <td>@customer.FullName</td>
+            <td>@customer.PhoneNumber</td>
+            <td>@customer.Address</td>
+            <td>@customer.IdentityCard</td>
+            <td>@customer.Tours</td>
+            <td>@customer.Departure</td>
+            <td>
+                <a asp-controller="Customer" asp-action="Edit" asp-route-id="@customer.CustomerId" class="btn btn-warning">Edit</a>
+                <a asp-controller="Customer" asp-action="Edit" asp-route-id="@customer.CustomerId" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+            }
+        }
+    </tbody>
+</table>

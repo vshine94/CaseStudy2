@@ -1,0 +1,94 @@
+﻿@model CustomerEditViewModel
+@{
+    ViewBag.Title = "Edit Customer";
+    var tours = ViewBag.Tours as List<Tour>;
+}
+
+    <form asp-controller="Customer" asp-action="Edit" method="post" class="mt-2">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <input hidden asp-for="Id" />
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="FullName"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="PhoneNumber"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="Address"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="IdentityCard"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="IdentityCard" class="form-control" />
+                <span asp-validation-for="IdentityCard" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="Departure"></label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="Departure" class="form-control" />
+                <span asp-validation-for="Departure" class="text-danger"></span>
+            </div>
+        </div>
+        
+        <div class="row form-group text-center">
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary">
+                    Update
+                </button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteRoleModel">
+                    Delete
+                </button>
+                <a asp-controller="Customer" asp-action="Index" class="btn btn-warning">Back</a>
+            </div>
+        </div>
+    </form>
+<!-- The Modal -->
+<div class="modal" id="deleteRoleModel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <form asp-controller="Customer" asp-action="Delete" method="post">
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirm delete customer ?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <input hidden asp-for="Id" />
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Are you sure for delete this customer ?
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger">Yes</button>
+                    @*<a class="btn btn-danger" asp-controller="Customer" asp-action="Delete" asp-route-id="@Model.Id">Yes</a>*@
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

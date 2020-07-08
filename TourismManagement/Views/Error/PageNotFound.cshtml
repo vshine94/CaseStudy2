@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Resource not found";
+}
+
+<div class="text-center">
+    <h2 class="text-danger my-20">
+        @ViewBag.ErrorMessage
+    </h2>
+    <hr />
+    <h4 class="text-danger my-20">
+        Please contact administrator !!!
+    </h4>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-warning"> Click here to come back Home Page</a>
+</div>

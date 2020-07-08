@@ -1,0 +1,112 @@
+﻿@model HomeBookViewModel
+@{
+    ViewBag.Title = "Book Tour";
+    var types = ViewBag.Types as List<TourismManagement.Models.Type>;
+    var tours = ViewBag.Tours as List<Tour>;
+
+}
+<div class="text-center" style="color:#003E60">
+    <h1>@ViewBag.Title</h1>
+</div>
+<form enctype="multipart/form-data" asp-controller="Customer" asp-action="Create" method="post" class="mt-2">
+    <div class="row form-group">
+        <div class="col-sm-2">
+            <label asp-for="FullName"></label>
+        </div>
+        <div class="col-sm-10">
+            <input asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-2">
+            <label asp-for="PhoneNumber"></label>
+        </div>
+        <div class="col-sm-10">
+            <input asp-for="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-2">
+            <label asp-for="Address"></label>
+        </div>
+        <div class="col-sm-10">
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-2">
+            <label asp-for="IdentityCard"></label>
+        </div>
+        <div class="col-sm-10">
+            <input asp-for="IdentityCard" class="form-control" />
+            <span asp-validation-for="IdentityCard" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-2">
+            <label asp-for="Departure"></label>
+        </div>
+        <div class="col-sm-10">
+            <input asp-for="Departure" class="form-control" />
+            <span asp-validation-for="Departure" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-2">
+            <label>Tours</label>
+        </div>
+        <div class="col-sm-10">
+
+            @if (tours != null)
+            {
+                foreach (var tour in tours)
+                {
+                    <div class="form-check-inline custom-checkbox">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="Tours" class="form-check-input" value="@tour.TourId">@tour.TourName
+                        </label>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    @*<div class="row form-group">
+            <div class="col-sm-2">
+                <label asp-for="TypeId"></label>
+            </div>
+            <div class="col-sm-10">
+                <select asp-for="TypeId" class="custom-select">
+                    <option value=" ">Select a Type</option>
+                    @if (types != null)
+                    {
+                        foreach (var type in types)
+                        {
+                            <option value="@type.TypeId">@type.TypeName</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>*@
+    <div class="row form-group text-center ">
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-primary">
+                Book
+            </button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-warning">Back</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <script>$(document).ready(function () {
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                $("#avatar").attr("src", window.URL.createObjectURL($(this)[0].files[0]));
+            });
+        });</script>
+}

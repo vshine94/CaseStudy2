@@ -1,0 +1,43 @@
+﻿@model IEnumerable<UserIndexViewModel>
+@{
+    ViewBag.Title = "Management Users";
+}
+    <div class="text-center" style="color:#003E60">
+        <h1>@ViewBag.Title</h1>
+    </div>
+<a asp-controller="User" asp-action="Create" class="btn btn-primary" style="width:auto">Create user</a>
+
+<table class="table table-bordered table-hover mt-2">
+    <thead class="thead-dark text-center">
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Address</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var user in Model)
+            {
+                if (user.Email != User.Identity.Name)
+                {
+                    <tr>
+                        <td>@user.UserId</td>
+                        <td>@user.Email</td>
+                        <td>@user.City</td>
+                        <td>@user.Address</td>
+                        <td>@user.RolesName</td>
+                        <td>
+                            <a asp-controller="User" asp-action="Edit" asp-route-id="@user.UserId" class="btn btn-warning">Edit</a>
+                            <a asp-controller="User" asp-action="Delete" asp-route-id="@user.UserId" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>

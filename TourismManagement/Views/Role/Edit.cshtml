@@ -1,0 +1,62 @@
+﻿@model RoleEditViewModel
+@{
+    ViewBag.Title = "Edit Role";
+}
+    <div class="text-center" style="color:#003E60">
+        <h1>@ViewBag.Title</h1>
+    </div>
+<h3>Role management &gt; @ViewBag.Title</h3>
+
+<form asp-controller="Role" asp-action="Edit" method="post" class="mt-2">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input hidden asp-for="RoleId" />
+    <div class="row form-group">
+        <div class="col-sm-2">
+            <label asp-for="RoleName"></label>
+        </div>
+        <div class="col-sm-10">
+            <input asp-for="RoleName" class="form-control" />
+            <span asp-validation-for="RoleName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group text-center">
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-primary">
+                Update
+            </button>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteRoleModel">
+                Delete
+            </button>
+            <a asp-controller="Role" asp-action="Index" class="btn btn-warning">Back</a>
+        </div>
+    </div>
+</form>
+
+
+
+<!-- The Modal -->
+<div class="modal" id="deleteRoleModel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <form asp-controller="Role" asp-action="Delete" method="post">
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirm delete role</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Are you sure for delete this role ?
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <a class="btn btn-danger" asp-controller="Role" asp-action="Delete" asp-route-id="@Model.RoleId">Yes</a>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
