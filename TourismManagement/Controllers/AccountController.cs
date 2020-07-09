@@ -39,7 +39,7 @@ namespace TourismManagement.Controllers
                     {
                         return Redirect(model.ReturnUrl);
                     }
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "TourManager");
                 }
                 else
                 {

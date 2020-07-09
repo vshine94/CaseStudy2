@@ -29,29 +29,10 @@
                         </li>
                         @if (signInManager.IsSignedIn(User))
                         {
-                            if (User.IsInRole("System Admin"))
-                            {
-
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Role" asp-action="Index">Role</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="User" asp-action="Index">User</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="TourManager" asp-action="Index">TourManager</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Customer" asp-action="Index">CustomerManager</a>
-                                </li>
-                            }
-                            if (User.IsInRole("Admin"))
+                            if (User.IsInRole("System Admin") || User.IsInRole("Admin"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-controller="TourManager" asp-action="Index">TourManager</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Customer" asp-action="Index">CustomerManager</a>
+                                    <a class="nav-link" asp-controller="TourManager" asp-action="Index">Page Manager</a>
                                 </li>
                             }
                         }

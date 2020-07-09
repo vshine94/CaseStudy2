@@ -372,7 +372,6 @@
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/Shared/_LayoutAccount.cshtml.g.cs
-/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/Shared/_LayoutView.cshtml.g.cs
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/TourManager/Create.cshtml.g.cs
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/TourManager/Edit.cshtml.g.cs
@@ -392,3 +391,10 @@
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/TourismManagement.pdb
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/TourismManagement.genruntimeconfig.cache
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/TourismManagement.csprojAssemblyReference.cache
+/Users/macbook/Projects/TourismManagement/TourismManagement/bin/Release/netcoreapp3.1/libman.json
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/Customer/_ViewStart.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/Role/_ViewStart.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/Shared/_Layoutdashboard.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/TourManager/_ViewStart.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/User/_ViewStart.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Release/netcoreapp3.1/Razor/Views/Shared/_LayoutBook.cshtml.g.cs

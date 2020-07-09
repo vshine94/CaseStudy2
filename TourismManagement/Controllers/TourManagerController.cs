@@ -104,7 +104,7 @@ namespace TourismManagement.Controllers
                     TypeId = model.TypeId
                 };
                 var fileName = string.Empty;
-                if (model.AvatarPath != null)
+                if (model.Img != null)
                 {
                     string uploadFolder = Path.Combine(webHostEnvironment.WebRootPath, "images");
                     fileName = $"{Guid.NewGuid()}_{model.Img.FileName}";

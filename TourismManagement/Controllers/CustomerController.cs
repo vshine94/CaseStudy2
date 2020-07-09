@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TourismManagement.Models;
 using TourismManagement.ViewModels;
 
 namespace TourismManagement.Controllers
 {
+    [Authorize(Roles = "System Admin,Admin")]
     public class CustomerController : Controller
     {
         private readonly ICustomerRepository customerRepository;

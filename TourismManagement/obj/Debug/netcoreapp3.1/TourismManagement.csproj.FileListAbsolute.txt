@@ -392,3 +392,9 @@
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Debug/netcoreapp3.1/Razor/Views/Customer/Index.cshtml.g.cs
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Debug/netcoreapp3.1/Razor/Views/Home/Book.cshtml.g.cs
 /Users/macbook/Projects/TourismManagement/TourismManagement/obj/Debug/netcoreapp3.1/Razor/Views/Customer/Edit.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/bin/Debug/netcoreapp3.1/libman.json
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layoutdashboard.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Debug/netcoreapp3.1/Razor/Views/Customer/_ViewStart.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Debug/netcoreapp3.1/Razor/Views/Role/_ViewStart.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Debug/netcoreapp3.1/Razor/Views/TourManager/_ViewStart.cshtml.g.cs
+/Users/macbook/Projects/TourismManagement/TourismManagement/obj/Debug/netcoreapp3.1/Razor/Views/User/_ViewStart.cshtml.g.cs
